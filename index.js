@@ -21,7 +21,7 @@ const PORT=process.env.PORT || 4001
 app.use(express.json({limit:'10mb'}))
 app.use(cors({
     credentials:true,
-    origin:'http://localhost:3000'
+    origin:process.env.CORS_ORIGIN
 }))
 app.use(morgan('common'))
 app.use(cookieParser())
